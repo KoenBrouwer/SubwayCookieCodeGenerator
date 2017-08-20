@@ -1,0 +1,127 @@
+$subwayGreen: #005542;
+$subwayLightGreen: #148940;
+
+*{
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+input{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.wrapper{
+	display: block;
+	max-width: 375px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-color: #FFF;
+	color: $subwayGreen;
+}
+
+header{
+	background-color: #FFF;
+
+	img.logo{
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		height: 150px;
+		object-fit: contain;
+	}
+
+	span.motto{
+		display: block;
+		text-align: center;
+		color: $subwayGreen;
+		font-weight: 800;
+		font-size: 140%;
+	}
+}
+
+form{
+	display: block;
+	margin: 0;
+	padding: 10px;
+
+	div.row{
+		display: block;
+		padding: 5px 0;
+
+		label{
+			display: inline-block;
+			text-align: left;
+			font-size: 100%;
+			margin: 5px 0 5px 5px;
+		}
+		input:not([type=submit]){
+			outline: 1px solid #DDD;
+			border: 2px solid transparent;
+
+			color: $subwayLightGreen;
+			display: block;
+			text-align: center;
+			font-size: 200%;
+			padding: 5px;
+			width: 100%;
+
+			&:hover, &:focus{
+				outline-color: transparent;
+				border-color: $subwayLightGreen;
+				border-width: 2px;
+				background-color: transparentize($subwayLightGreen, 0.9);
+			}
+
+			&.error{
+				background-color: transparentize(#F00, 0.9);
+				border: 2px solid #F00;
+				color: #F00;
+			}
+		}
+		input[type=submit]{
+			background-color: $subwayLightGreen;
+			color: #FFF;
+			display: block;
+			text-align: center;
+			font-size: 170%;
+			padding: 20px;
+			width: 100%;
+			border-radius: 15px;
+			border: none;
+
+			&:hover{
+				background-color: $subwayGreen;
+			}
+		}
+	}
+}
+
+div.cookieCodeWrapper{
+	color: $subwayLightGreen;
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+	font-size: 140%;
+	line-height: 1.5em;
+
+	div.info{
+		margin: 10px 0;
+		color: $subwayGreen;
+	}
+
+	div.cookieCode{
+		padding: 20px;
+		border: 2px solid $subwayLightGreen;
+		margin: 20px 10px;
+		font-size: 140%;
+	}
+}
